@@ -1,0 +1,19 @@
+{
+  "name": "plaingrid",
+  "version": "0.0.0",
+  "description": "Creates a 12 column, mobile first, grid layout in CSS using the grid display property.",
+  "author": {
+    "name": "Savas Tireng",
+    "email": "savas-t@outlook.com"
+  },
+  "main": "index.js",
+  "bin": {
+    "plaingrid-init": "index.js"
+  },
+  "type": "module",
+  "keywords": ["css", "grid", "frontend"],
+  "license": "ISC",
+  "dependencies": {
+    "inquirer": "^9.2.23"
+  }
+}
