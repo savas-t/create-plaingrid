@@ -40,6 +40,8 @@ const promptBreakpoints = async () => {
   }
 
   const prompts = getPrompts(breakpoints)
+
+  console.log('What are your breakpoint values? (sm, md, lg, xl, 2xl)\n')
   const answers = await inquirer.prompt(prompts)
   Object.assign(breakpoints, answers)
 
