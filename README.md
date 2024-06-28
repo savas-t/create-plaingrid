@@ -2,7 +2,7 @@
 
 Plaingrid is a 12 column grid layout built with the CSS `display: grid` property. After executing the script, you'll have a `plaingrid.css` file containing the CSS classes for your grid layout at the root of your project.
 
-in Germany we say ["Ohne Schnickschnack"](https://www.deepl.com/de/translator#de/en/Ohne%20Schnickschnack).
+In Germany we say ["Ohne Schnickschnack"](https://www.deepl.com/de/translator#de/en/Ohne%20Schnickschnack).
 
 ## Installation
 
@@ -22,12 +22,12 @@ What are your breakpoint values? (sm, md, lg, xl, 2xl)
 ? 2xl: (1536px) # <-- cursor is currently here
 ```
 
-you'll have a `plaingrid.css` file containing the CSS classes for your grid layout at the root of your project - you can move it to your css files, or whereever you want to have it, and you're good to go!
+you'll have a `plaingrid.css` file containing the CSS classes for your grid layout at the root of your project. You can move it to your css files - or whereever you want to have it, just make sure it's in your CSS bundle - and you're good to go!
 
 ## Usage
 
 ```html
-
+@TBA
 ```
 
 ## Why Plaingrid?
@@ -36,10 +36,22 @@ I wanted an easy way to realize a 12 column grid layout, which is independent fr
 
 This reason, and the fact that most of the grid systems I found were providing additional stuff I don't want/need, motivated me to make a system myself.
 
-I thought that it would be a good idea to move on to using the CSS grid property for 12 column grid layouts.
-
 The CSS `display: grid` property is now [widely supported across major browsers](https://caniuse.com/?search=css%20grid) just like [flexbox](https://caniuse.com/?search=css%20flexbox).
 
-# NOTE
+## License
 
-This package is not finished yet and still needs some work.
+**ISC License**
+
+Copyright (c) 2024, Savas Tireng
+
+Permission to use, copy, modify, and/or distribute this software for any
+purpose with or without fee is hereby granted, provided that the above
+copyright notice and this permission notice appear in all copies.
+
+THE SOFTWARE IS PROVIDED "AS IS" AND THE AUTHOR DISCLAIMS ALL WARRANTIES
+WITH REGARD TO THIS SOFTWARE INCLUDING ALL IMPLIED WARRANTIES OF
+MERCHANTABILITY AND FITNESS. IN NO EVENT SHALL THE AUTHOR BE LIABLE FOR
+ANY SPECIAL, DIRECT, INDIRECT, OR CONSEQUENTIAL DAMAGES OR ANY DAMAGES
+WHATSOEVER RESULTING FROM LOSS OF USE, DATA OR PROFITS, WHETHER IN AN
+ACTION OF CONTRACT, NEGLIGENCE OR OTHER TORTIOUS ACTION, ARISING OUT OF
+OR IN CONNECTION WITH THE USE OR PERFORMANCE OF THIS SOFTWARE.
