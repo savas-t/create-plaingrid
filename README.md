@@ -1,16 +1,24 @@
 # Plaingrid
 
-Plaingrid is a 12 column grid layout built with the CSS `display: grid` property. After executing the script, you'll have a `plaingrid.css` file containing the CSS classes for your grid layout at the root of your project.
+Plaingrid is a 12 column responsive grid layout built with the CSS `display: grid` property. After executing the script, you'll have a `plaingrid.css` file containing the CSS classes for your grid layout at the root of your project.
 
 In Germany we say ["Ohne Schnickschnack"](https://www.deepl.com/de/translator#de/en/Ohne%20Schnickschnack).
 
 ## Installation
 
+Install Plaingrid with either
+
 ```bash
-npx plaingrid-init
+npx create-plaingrid
 ```
 
-In the next step, you are prompted to provide the breakpoint values. You can press enter to pick the default values shown in the brackets
+or
+
+```bash
+yarn create plaingrid
+```
+
+In the next step, you are prompted to provide some breakpoint values. You can press enter to pick the _default values_ shown in the brackets
 
 ```bash
 What are your breakpoint values? (sm, md, lg, xl, 2xl)
@@ -26,8 +34,72 @@ you'll have a `plaingrid.css` file containing the CSS classes for your grid layo
 
 ## Usage
 
+The system consists of the two main classes `grid-container` and `grid-item`, plus the additional _grid-item-configuration-classes_ `colspan-{breakpoint}-{colspanValue}` and `colstart-{breakpoint}-{colstartValue}`, where
+
+- `breakpoint` can be `base`, `sm`, `md`, `lg`, `xl` and `2xl`,
+- `colspanValue` can vary from `1` to `12`,
+- `colstartValue` can vary from `1` to `12`.
+
+The _grid-item-configuration-classes_ only work on elements of the class `grid-item`.
+
+### Define Widths
+
+Use the `colspan`-classes to define the width of a grid item.
+
 ```html
-@TBA
+<div class="grid-container">
+  <div class="grid-item colspan-base-12 colspan-md-5">
+    <h2>Grid Item 1</h2>
+
+    <p>
+      My with is initially 12/12, so full. From the breakpoint md on forward, i
+      am 5/12 columns wide.
+    </p>
+  </div>
+
+  <div class="grid-item colspan-base-12 colspan-md-7">
+    <h2>Grid Item 2</h2>
+
+    <p>
+      My with is initially 12/12 as well. From the breakpoint md on forward, I
+      take up 7/12 columns from the grid container.
+    </p>
+
+    <p>
+      Since the grid container consists of 12 columns, I am initially below the
+      first grid item, and from the breakpoint md on forward, I jump next to it
+      because there is enough space for both of us.
+    </p>
+  </div>
+</div>
+```
+
+### Define Offsets
+
+If you want a grid item to have an offset, you need to define where the grid item should start by using the `colstart`-classes.
+
+```html
+<div class="grid-container">
+  <div class="grid-item colspan-base-12 colspan-md-5">
+    <h2>Grid Item 1</h2>
+
+    <p>
+      My with is initially 12/12, so full. From the breakpoint md on forward, i
+      am 5/12 columns wide.
+    </p>
+  </div>
+
+  <div class="grid-item colspan-base-12 colspan-md-6 colstart-md-7">
+    <h2>Grid Item 2</h2>
+
+    <p>
+      My with is initially 12/12 as well. From the breakpoint md on forward, I
+      take up 6/12 columns from the grid container, and start at the 7th column
+      of the grid container, which means there is one column of space between me
+      and Grid Item 1.
+    </p>
+  </div>
+</div>
 ```
 
 ## Why Plaingrid?
@@ -37,6 +109,10 @@ I wanted an easy way to realize a 12 column grid layout, which is independent fr
 This reason, and the fact that most of the grid systems I found were providing additional stuff I don't want/need, motivated me to make a system myself.
 
 The CSS `display: grid` property is now [widely supported across major browsers](https://caniuse.com/?search=css%20grid) just like [flexbox](https://caniuse.com/?search=css%20flexbox).
+
+### Note
+
+If you are using Tailwind CSS, you don't need Plaingrid. Tailwind CSS already comes with classes which can realize what Plaingrid does. But those classes are tied to Tailwind CSS, and can not be used without it, while Plaingrid is **independent from your styling system**.
 
 ## License
 
