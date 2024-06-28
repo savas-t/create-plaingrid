@@ -8,10 +8,16 @@
   },
   "main": "index.js",
   "bin": {
-    "plaingrid-init": "index.js"
+    "create-plaingrid": "index.js"
   },
   "type": "module",
-  "keywords": ["css", "grid", "frontend"],
+  "keywords": [
+    "css",
+    "grid",
+    "layout",
+    "frontend",
+    "simple"
+  ],
   "license": "ISC",
   "dependencies": {
     "inquirer": "^9.2.23"

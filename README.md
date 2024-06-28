@@ -61,7 +61,7 @@ Use the `colspan`-classes to define the width of a grid item.
     <h2>Grid Item 1</h2>
 
     <p>
-      My with is initially 12/12, so full. From the breakpoint md on forward, i
+      My width is initially 12/12, so full. From the breakpoint md on forward, i
       am 5/12 columns wide.
     </p>
   </div>
@@ -70,7 +70,7 @@ Use the `colspan`-classes to define the width of a grid item.
     <h2>Grid Item 2</h2>
 
     <p>
-      My with is initially 12/12 as well. From the breakpoint md on forward, I
+      My width is initially 12/12 as well. From the breakpoint md on forward, I
       take up 7/12 columns from the grid container.
     </p>
 
@@ -93,7 +93,7 @@ If you want a grid item to have an offset, you need to define where the grid ite
     <h2>Grid Item 1</h2>
 
     <p>
-      My with is initially 12/12, so full. From the breakpoint md on forward, i
+      My width is initially 12/12, so full. From the breakpoint md on forward, i
       am 5/12 columns wide.
     </p>
   </div>
@@ -102,7 +102,7 @@ If you want a grid item to have an offset, you need to define where the grid ite
     <h2>Grid Item 2</h2>
 
     <p>
-      My with is initially 12/12 as well. From the breakpoint md on forward, I
+      My width is initially 12/12 as well. From the breakpoint md on forward, I
       take up 6/12 columns from the grid container, and start at the 7th column
       of the grid container, which means there is one column of space between me
       and Grid Item 1.
