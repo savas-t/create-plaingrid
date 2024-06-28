@@ -4,7 +4,16 @@ Plaingrid is a 12 column responsive grid layout built with the CSS `display: gri
 
 In Germany we say ["Ohne Schnickschnack"](https://www.deepl.com/de/translator#de/en/Ohne%20Schnickschnack).
 
-## Installation
+## Contents
+
+1. [Installation](#installation)
+2. [Usage](#usage)
+   1. [Define Widths](#define-widths)
+   2. [Define Offsets](#define-offsets)
+3. [Why Plaingrid?](#why-plaingrid)
+4. [License](#license)
+
+## Installation <a name="installation"></a>
 
 Install Plaingrid with either
 
@@ -32,7 +41,7 @@ What are your breakpoint values? (sm, md, lg, xl, 2xl)
 
 you'll have a `plaingrid.css` file containing the CSS classes for your grid layout at the root of your project. You can move it to your css files - or whereever you want to have it, just make sure it's in your CSS bundle - and you're good to go!
 
-## Usage
+## Usage <a name="usage"></a>
 
 The system consists of the two main classes `grid-container` and `grid-item`, plus the additional _grid-item-configuration-classes_ `colspan-{breakpoint}-{colspanValue}` and `colstart-{breakpoint}-{colstartValue}`, where
 
@@ -42,7 +51,7 @@ The system consists of the two main classes `grid-container` and `grid-item`, pl
 
 The _grid-item-configuration-classes_ only work on elements of the class `grid-item`.
 
-### Define Widths
+### Define Widths <a name="define-widths"></a>
 
 Use the `colspan`-classes to define the width of a grid item.
 
@@ -74,7 +83,7 @@ Use the `colspan`-classes to define the width of a grid item.
 </div>
 ```
 
-### Define Offsets
+### Define Offsets <a name="define-offsets"></a>
 
 If you want a grid item to have an offset, you need to define where the grid item should start by using the `colstart`-classes.
 
@@ -102,7 +111,7 @@ If you want a grid item to have an offset, you need to define where the grid ite
 </div>
 ```
 
-## Why Plaingrid?
+## Why Plaingrid? <a name="why-plaingrid"></a>
 
 I wanted an easy way to realize a 12 column grid layout, which is independent from the rest of the pages styling and therefore reusable. I also did not want to use a flexbox grid system to not deal with manually calculated column widths and/or negative margins, I think it's time to overcome that.
 
@@ -110,11 +119,9 @@ This reason, and the fact that most of the grid systems I found were providing a
 
 The CSS `display: grid` property is now [widely supported across major browsers](https://caniuse.com/?search=css%20grid) just like [flexbox](https://caniuse.com/?search=css%20flexbox).
 
-### Note
+**Note:** If you are using Tailwind CSS, you don't need Plaingrid. Tailwind CSS already comes with classes which can realize what Plaingrid does. But those classes are tied to Tailwind CSS, and can not be used without it, while Plaingrid is **independent from your styling system**.
 
-If you are using Tailwind CSS, you don't need Plaingrid. Tailwind CSS already comes with classes which can realize what Plaingrid does. But those classes are tied to Tailwind CSS, and can not be used without it, while Plaingrid is **independent from your styling system**.
-
-## License
+## License <a name="license"></a>
 
 **ISC License**
 
