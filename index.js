@@ -49,16 +49,32 @@ const promptBreakpoints = async () => {
 }
 
 /**
+ * Prompts the user for the grid gutter value
+ * @returns {string}
+ */
+const promptGutter = async () => {
+  const answer = await inquirer.prompt({
+    type: 'input',
+    name: 'gutter',
+    message: 'Your grid gutter value:',
+    default: '1rem',
+  })
+
+  return answer.gutter
+}
+
+/**
  * Generates and returns the CSS code for the grid system
  * @param {{base: null, sm: string, md: string, lg: string, xl: string, 2xl: string}} breakpoints
+ * @param {string} gutter
  * @param {number} columns
  * @returns {string}
  */
-const getStyles = (breakpoints, columns) => {
+const getStyles = (breakpoints, gutter, columns) => {
   let styles = ''
 
-  styles += ':root { --grid-gap: 1rem }\n'
-  styles += `.grid-container { display: grid; grid-template-columns: repeat(${columns}, 1fr); gap: var(--grid-gap) }\n`
+  styles += `:root { --grid-gutter: ${gutter} }\n`
+  styles += `.grid-container { display: grid; grid-template-columns: repeat(${columns}, 1fr); column-gap: var(--grid-gutter); grid-column-gap: var(--grid-gutter) }\n`
 
   for (const key in breakpoints) {
     if (key != 'base') {
@@ -94,6 +110,7 @@ const writeFile = styles => {
 /** PROGRAM */
 const columns = 12
 const breakpoints = await promptBreakpoints()
-const styles = getStyles(breakpoints, columns)
+const gutter = await promptGutter()
+const styles = getStyles(breakpoints, gutter, columns)
 
 writeFile(styles)

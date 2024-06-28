@@ -27,7 +27,7 @@ or
 yarn create plaingrid
 ```
 
-In the next step, you are prompted to provide some breakpoint values. You can press enter to pick the _default values_ shown in the brackets
+In the next step, you are prompted to provide some breakpoint values. You can press enter to pick the _default values_ shown in the brackets.
 
 ```bash
 What are your breakpoint values? (sm, md, lg, xl, 2xl)
@@ -38,6 +38,14 @@ What are your breakpoint values? (sm, md, lg, xl, 2xl)
 ? xl: 1280px
 ? 2xl: (1536px) # <-- cursor is currently here
 ```
+
+After that, you are prompted to provide your grid gutter (gap) value.
+
+```bash
+? Your grid gutter value: (1rem) # <-- cursor is currently here
+```
+
+And that's it!
 
 you'll have a `plaingrid.css` file containing the CSS classes for your grid layout at the root of your project. You can move it to your css files - or whereever you want to have it, just make sure it's in your CSS bundle - and you're good to go!
 
