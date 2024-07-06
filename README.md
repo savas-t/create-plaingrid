@@ -15,7 +15,7 @@ In Germany we say ["Ohne Schnickschnack"](https://www.deepl.com/de/translator#de
 
 ## Installation <a name="installation"></a>
 
-You can install create your `plaingrid.css` with NPX:
+You can create your `plaingrid.css` with NPX:
 
 ```bash
 npx create-plaingrid
@@ -124,4 +124,4 @@ If you are using Tailwind CSS, you don't need Plaingrid. Tailwind CSS already co
 ## License <a name="license"></a>
 
 Copyright (c) 2024 Savas Tireng<br />
-Licensed under the [ISC License](./LICENSE).
+Licensed under the [ISC License](https://github.com/savas-t/plaingrid/blob/main/LICENSE).
