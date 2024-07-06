@@ -1,6 +1,6 @@
 {
   "name": "plaingrid",
-  "version": "0.0.0",
+  "version": "1.0.0",
   "description": "Creates a 12 column, mobile first, grid layout in CSS using the grid display property.",
   "author": {
     "name": "Savas Tireng",

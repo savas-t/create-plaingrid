@@ -1,8 +1,8 @@
 # Plaingrid
 
-Plaingrid is a 12 column responsive grid layout built with the CSS `display: grid` property. After executing the script, you'll have a `plaingrid.css` file containing the CSS classes for your grid layout at your current directory.
+Plaingrid is a 12 column, mobile first, responsive grid layout built with the CSS `display: grid` property. After executing the script, you'll have a `plaingrid.css` file containing the CSS classes for your grid layout at your current directory.
 
-In Germany we say ["ohne Schnickschnack"](https://www.deepl.com/de/translator#de/en/Ohne%20Schnickschnack).
+In Germany we say ["Ohne Schnickschnack"](https://www.deepl.com/de/translator#de/en/Ohne%20Schnickschnack).
 
 ## Contents
 
