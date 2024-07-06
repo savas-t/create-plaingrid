@@ -15,7 +15,7 @@ In Germany we say ["Ohne Schnickschnack"](https://www.deepl.com/de/translator#de
 
 ## Installation <a name="installation"></a>
 
-You can install Plaingrid with NPM:
+You can install create your `plaingrid.css` with NPX:
 
 ```bash
 npx create-plaingrid
