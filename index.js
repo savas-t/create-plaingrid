@@ -1,7 +1,7 @@
 #!/usr/bin/env node
 
 import inquirer from 'inquirer'
-import { writeFileSync } from 'fs'
+import { writeFileSync, existsSync } from 'fs'
 
 /**
  * Returns an array of prompts, ready for inquirer
@@ -17,8 +17,21 @@ const getPrompts = breakpoints => {
     prompts.push({
       type: 'input',
       name: key,
-      message: `${key}:`,
+      message: `${key} (in px):`,
       default: breakpoints[key],
+      validate: input => {
+        if (!input.endsWith('px')) {
+          return 'Value must end with "px"'
+        }
+
+        const numericPart = input.slice(0, -2)
+
+        if (isNaN(numericPart) || numericPart.trim() === '') {
+          return 'Value must be a numeric value followed by "px"'
+        }
+
+        return true
+      },
     })
   }
 
@@ -56,8 +69,24 @@ const promptGutter = async () => {
   const answer = await inquirer.prompt({
     type: 'input',
     name: 'gutter',
-    message: 'Your grid gutter value:',
+    message: 'Your grid gutter value (in px or rem):',
     default: '1rem',
+    validate: input => {
+      const isRem = input.endsWith('rem')
+      const isPx = input.endsWith('px')
+
+      if (!isRem && !isPx) {
+        return 'Value must end with "rem" or "px"'
+      }
+
+      const numericPart = isRem ? input.slice(0, -3) : input.slice(0, -2)
+
+      if (isNaN(numericPart) || numericPart.trim() === '') {
+        return 'Value must be a numeric value followed by "rem" or "px"'
+      }
+
+      return true
+    },
   })
 
   return answer.gutter
@@ -99,18 +128,32 @@ const getStyles = (breakpoints, gutter, columns) => {
  * @param {string} styles
  */
 const writeFile = styles => {
+  const filePath = './plaingrid.css'
+
+  if (existsSync(filePath)) {
+    throw new Error(`Failed to write to ${filePath}: File already exists.`)
+  }
+
   try {
-    writeFileSync('./plaingrid.css', styles)
-    console.log('\nYour plaingrid.css is ready to go!')
+    writeFileSync(filePath, styles)
+    console.log(`Your ${filePath} is ready to go!`)
   } catch (error) {
-    console.error(error)
+    throw new Error(`Failed to write to ${filePath}: ${error.message}`)
   }
 }
 
 /** PROGRAM */
-const columns = 12
-const breakpoints = await promptBreakpoints()
-const gutter = await promptGutter()
-const styles = getStyles(breakpoints, gutter, columns)
 
-writeFile(styles)
+try {
+  const columns = 12
+  const breakpoints = await promptBreakpoints()
+  console.log('\n')
+
+  const gutter = await promptGutter()
+  console.log('\n')
+
+  const styles = getStyles(breakpoints, gutter, columns)
+  writeFile(styles)
+} catch (error) {
+  console.error(`${error}`)
+}

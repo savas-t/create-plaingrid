@@ -1,8 +1,8 @@
 # Plaingrid
 
-Plaingrid is a 12 column responsive grid layout built with the CSS `display: grid` property. After executing the script, you'll have a `plaingrid.css` file containing the CSS classes for your grid layout at the root of your project.
+Plaingrid is a 12 column responsive grid layout built with the CSS `display: grid` property. After executing the script, you'll have a `plaingrid.css` file containing the CSS classes for your grid layout at your current directory.
 
-In Germany we say ["Ohne Schnickschnack"](https://www.deepl.com/de/translator#de/en/Ohne%20Schnickschnack).
+In Germany we say ["ohne Schnickschnack"](https://www.deepl.com/de/translator#de/en/Ohne%20Schnickschnack).
 
 ## Contents
 
@@ -15,16 +15,10 @@ In Germany we say ["Ohne Schnickschnack"](https://www.deepl.com/de/translator#de
 
 ## Installation <a name="installation"></a>
 
-Install Plaingrid with either
+You can install Plaingrid with NPM:
 
 ```bash
 npx create-plaingrid
-```
-
-or
-
-```bash
-yarn create plaingrid
 ```
 
 In the next step, you are prompted to provide some breakpoint values. You can press enter to pick the _default values_ shown in the brackets.
@@ -32,22 +26,20 @@ In the next step, you are prompted to provide some breakpoint values. You can pr
 ```bash
 What are your breakpoint values? (sm, md, lg, xl, 2xl)
 
-? sm: 640px
-? md: 768px
-? lg: 1024px
-? xl: 1280px
-? 2xl: (1536px) # <-- cursor is currently here
+? sm (in px): 640px
+? md (in px): 768px
+? lg (in px): 1024px
+? xl (in px): 1280px
+? 2xl (in px): (1536px) # <-- cursor is currently here
 ```
 
 After that, you are prompted to provide your grid gutter (gap) value.
 
 ```bash
-? Your grid gutter value: (1rem) # <-- cursor is currently here
+? Your grid gutter value (in px or rem): (1rem) # <-- cursor is currently here
 ```
 
-And that's it!
-
-you'll have a `plaingrid.css` file containing the CSS classes for your grid layout at the root of your project. You can move it to your css files - or whereever you want to have it, just make sure it's in your CSS bundle - and you're good to go!
+And that's it! You'll have a `plaingrid.css` file containing the CSS classes for your grid layout at your current directory. You can move it to your css files - or whereever you want to have it, just make sure it's in your CSS bundle - and you're good to go.
 
 ## Usage <a name="usage"></a>
 
@@ -127,22 +119,9 @@ This reason, and the fact that most of the grid systems I found were providing a
 
 The CSS `display: grid` property is now [widely supported across major browsers](https://caniuse.com/?search=css%20grid) just like [flexbox](https://caniuse.com/?search=css%20flexbox).
 
-**Note:** If you are using Tailwind CSS, you don't need Plaingrid. Tailwind CSS already comes with classes which can realize what Plaingrid does. But those classes are tied to Tailwind CSS, and can not be used without it, while Plaingrid is **independent from your styling system**.
+If you are using Tailwind CSS, you don't need Plaingrid. Tailwind CSS already comes with classes which can realize what Plaingrid does. But those classes are tied to Tailwind CSS, and can not be used without it, while Plaingrid is **independent from your styling system**.
 
 ## License <a name="license"></a>
 
-**ISC License**
-
-Copyright (c) 2024, Savas Tireng
-
-Permission to use, copy, modify, and/or distribute this software for any
-purpose with or without fee is hereby granted, provided that the above
-copyright notice and this permission notice appear in all copies.
-
-THE SOFTWARE IS PROVIDED "AS IS" AND THE AUTHOR DISCLAIMS ALL WARRANTIES
-WITH REGARD TO THIS SOFTWARE INCLUDING ALL IMPLIED WARRANTIES OF
-MERCHANTABILITY AND FITNESS. IN NO EVENT SHALL THE AUTHOR BE LIABLE FOR
-ANY SPECIAL, DIRECT, INDIRECT, OR CONSEQUENTIAL DAMAGES OR ANY DAMAGES
-WHATSOEVER RESULTING FROM LOSS OF USE, DATA OR PROFITS, WHETHER IN AN
-ACTION OF CONTRACT, NEGLIGENCE OR OTHER TORTIOUS ACTION, ARISING OUT OF
-OR IN CONNECTION WITH THE USE OR PERFORMANCE OF THIS SOFTWARE.
+Copyright (c) 2024 Savas Tireng<br />
+Licensed under the [ISC License](./LICENSE).
