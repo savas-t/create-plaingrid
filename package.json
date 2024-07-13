@@ -1,6 +1,6 @@
 {
   "name": "create-plaingrid",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Creates a 12 column, mobile first, grid layout in CSS using the grid display property.",
   "author": {
     "name": "Savas Tireng",
@@ -8,7 +8,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/savas-t/plaingrid/"
+    "url": "git+https://github.com/savas-t/plaingrid.git"
   },
   "main": "index.js",
   "bin": {
