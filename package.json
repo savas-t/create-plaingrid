@@ -6,10 +6,6 @@
     "name": "Savas Tireng",
     "email": "savas-t@outlook.com"
   },
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/savas-t/plaingrid/"
-  },
   "main": "index.js",
   "bin": {
     "create-plaingrid": "index.js"
