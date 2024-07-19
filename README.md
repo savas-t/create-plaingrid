@@ -1,8 +1,8 @@
-# Plaingrid
+<h1 align="center">Plaingrid</h1>
 
-Plaingrid is a 12 column, mobile first, responsive grid layout built with the CSS `display: grid` property. After executing the script, you'll have a `plaingrid.css` file containing the CSS classes for your grid layout at your current directory.
+<p align="center">Plaingrid is a 12 column, mobile first, responsive grid layout built with the CSS `display: grid` property. After executing the script, you'll have a <code>plaingrid.css</code> file containing the CSS classes for your grid layout at your current directory.</p>
 
-In Germany we say ["Ohne Schnickschnack"](https://www.deepl.com/de/translator#de/en/Ohne%20Schnickschnack).
+<p align="center">In Germany we say <a href="https://www.deepl.com/de/translator#de/en/Ohne%20Schnickschnack" target="_blank" rel="noreferrer noopener">"Ohne Schnickschnack"</a>.</p>
 
 ## Contents
 
@@ -39,7 +39,7 @@ After that, you are prompted to provide your grid gutter (gap) value.
 ? Your grid gutter value (in px or rem): (1rem) # <-- cursor is currently here
 ```
 
-And that's it! You'll have a `plaingrid.css` file containing the CSS classes for your grid layout at your current directory. You can move it to your css files - or whereever you want to have it, just make sure it's in your CSS bundle - and you're good to go.
+And that's it! You'll have a `plaingrid.css` file containing the CSS classes for your grid layout at your current directory. You can move it to your CSS files - or whereever you want to have it, just make sure it's in your CSS bundle - and you're good to go. Feel free to modify the CSS file for your needs.
 
 ## Usage <a name="usage"></a>
 
