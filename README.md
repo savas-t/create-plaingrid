@@ -1,6 +1,6 @@
 <h1 align="center">Plaingrid</h1>
 
-<p align="center">Plaingrid is a 12 column, mobile first, responsive grid layout built with the CSS `display: grid` property. After executing the script, you'll have a <code>plaingrid.css</code> file containing the CSS classes for your grid layout at your current directory.</p>
+<p align="center">Plaingrid is a <strong>12 column</strong>, <strong>mobile first</strong>, <strong>responsive</strong> grid layout built with the CSS <code>display: grid</code> property. After executing the script, you'll have a <code>plaingrid.css</code> file containing the CSS classes for your grid layout at your current directory.</p>
 
 <p align="center">In Germany we say <a href="https://www.deepl.com/de/translator#de/en/Ohne%20Schnickschnack" target="_blank" rel="noreferrer noopener">"Ohne Schnickschnack"</a>.</p>
 
